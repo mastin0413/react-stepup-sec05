@@ -17,7 +17,7 @@ export default function App() {
         <br />
         <Link to="/page2">Page2</Link>
         <Switch>
-          <Route exact="true" path="/">
+          <Route exact path="/">
             <Home />
           </Route>
           <Route
@@ -25,13 +25,13 @@ export default function App() {
             render={({ match: { url } }) => (
               <Switch>
                 {console.log(url)}
-                <Route exact="true" path={url}>
+                <Route exact path={url}>
                   <Page1 />
                 </Route>
-                <Route exact="true" path={`${url}/detailA`}>
+                <Route exact path={`${url}/detailA`}>
                   <Page1DetailA />
                 </Route>
-                <Route exact="true" path={`${url}/detailB`}>
+                <Route exact path={`${url}/detailB`}>
                   <Page1DetailB />
                 </Route>
               </Switch>
